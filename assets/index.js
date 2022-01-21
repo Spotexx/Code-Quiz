@@ -15,3 +15,21 @@ let questionTitleElem = document.getElementById("question-content");
 let questionContentElem = document.getElementById("question-content");
 let questionFooterElem = document.getElementById("question-footer");
 let mainButtonElem = document.getElementById("main-button");
+
+
+
+
+
+
+
+
+
+
+
+
+
+//eventlistener for main button
+mainButtonElem.addEventListener("click", function(){
+    //if main button is clicked => run startGame function
+    startGame();
+});
