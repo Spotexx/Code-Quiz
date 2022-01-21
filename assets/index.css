@@ -1,0 +1,9 @@
+/* #region nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(253, 0, 0);
+    border-bottom: 1px solid #e5e5e5;
+}
