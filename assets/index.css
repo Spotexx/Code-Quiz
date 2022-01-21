@@ -1,15 +1,35 @@
+/* #geion theme */
+
+/* variables */
+:root {
+    --nav-color: #0b1842;
+    --background-color: #ffffff;
+    --foreground-color: #b651ff;
+    --button-color: #35eff4;
+    --text-color: #004bc4;
+}
+/* #region wrapper */
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
 /* #region nav */
 
 /*nav container flexbox*/
 nav {
     display: flex;
-    padding: 0.5rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(253, 0, 0);
+    background-color: #0b1842;
     border-bottom: 1px solid #e5e5e5;
     height: 50px;
+    width: 100%;
 }
 
 #highscores{
@@ -17,6 +37,7 @@ nav {
     border-radius: 5px;
     padding: 0.5rem;
     box-shadow: 1px 2px 5px blue;
+    margin:.5rem;
 }
 
 #title{
@@ -32,5 +53,28 @@ nav {
     border-radius: 5px;
     padding: 0.5rem;
     box-shadow: 1px 2px 5px blue;
+    margin:.5rem;
+}
+/* #endregion */
+/* #region game */
+
+/*game container flexbox*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 0, 0);
+    height: 800px;
 }
 /* #endregion */
