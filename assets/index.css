@@ -2,7 +2,7 @@
 
 /* variables */
 :root {
-    --nav-color: #0b1842;
+    --dark: #0b1842;
     --background-color: #ffffff;
     --foreground-color: #b651ff;
     --button-color: #35eff4;
@@ -26,7 +26,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #0b1842;
+    background-color: var(--dark);
     border-bottom: 1px solid var(--background-color);
     height: 50px;
     width: 100%;
@@ -74,9 +74,22 @@ main {
 section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--foreground-color);
+    margin-top: 5%;
     height: 60%;
+    width:60%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px var(--dark);
+}
+
+#question-title {
+    width: 100%;
+    text-align: left;
+}
+
+#question-content {
+    height:70%;
 }
 /* #endregion */
