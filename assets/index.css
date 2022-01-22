@@ -96,4 +96,17 @@ section{
 #question-content {
     height:70%;
 }
+
+#answer1 {
+    visibility: hidden;
+}
+#answer2 {
+    visibility: hidden;
+}
+#answer3 {
+    visibility: hidden;
+}
+#answer4 {
+    visibility: hidden;
+}
 /* #endregion */
