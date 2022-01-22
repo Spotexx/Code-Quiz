@@ -62,7 +62,27 @@ let showQuestion2 =() => {
     answer3.textContent = "storing a users username and password";
     answer4.textContent = "all of the above are fine";
 
-    //adds event listeners to the options
+    //adds onclick events to the options
+    answer1.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion3();
+    }
+    answer2.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion3();
+    }
+    answer3.onclick = () => {
+        questionFooterElem.textContent = "Correct";
+        currentPoints++;
+        showQuestion3();
+    }
+    answer4.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion3();
+    }
 }
 
 let showQuestion1 = () => {
@@ -79,7 +99,27 @@ let showQuestion1 = () => {
     answer4.textContent = "None of the above";
 
     //adds event listeners to the options
- 
+    answer1.onclick = () => {
+        questionFooterElem.textContent = "Correct";
+        currentPoints++;
+        showQuestion2();
+    }
+    answer2.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion2();
+    }
+    answer3.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion2();
+    }
+    answer4.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion2();
+    }
+
 }
 
 
