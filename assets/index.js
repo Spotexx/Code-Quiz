@@ -49,10 +49,95 @@ let startTimer = () => {
         }
     }, 1000);
 }
+let showQuestion5 = () => {
+    questionTitleElem.textContent = "which of the following is not a valid for loop?";
+    answer1.textContent = "for (let i = 0; i < variable.length; i++)";
+    answer2.textContent = "for (let i in variable)";
+    answer3.textContent = "for (let i with variable)";
+    answer4.textContent = "for (let i of variable)";
+
+    ///adds onclick events to the options
+    answer1.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        endGame();
+    }
+    answer2.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        endGame();
+    }
+    answer3.onclick = () => {
+        questionFooterElem.textContent = "Correct";
+        currentPoints++;
+        endGame();
+    }
+    answer4.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        endGame();
+    }
+}
+
+let showQuestion4 = () => {
+    questionTitleElem.textContent = "How do you write \"Hello World\" in an alert box?";//question from w3schools
+    answer1.textContent = "msgBox('Hello World');";
+    answer2.textContent = "alert('Hello World');";
+    answer3.textContent = "msg('Hello World');";
+    answer4.textContent = "alertBox('Hello World');";
+    
+    //adds onclick events to the options
+    answer1.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion5();
+    }
+    answer2.onclick = () => {
+        questionFooterElem.textContent = "Correct";
+        currentPoints++;
+        showQuestion5();
+    }
+    answer3.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion5();
+    }
+    answer4.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion5();
+    }
+} 
 
 let showQuestion3 = () => {
-    
-    console.log(currentPoints);
+    //prints the question and makes options visible
+    questionTitleElem.textContent = "In HTML, what is the correct TAG for referring to an external style sheet?";//question from w3schools
+    answer1.textContent = "<js>";
+    answer2.textContent = "<link>";
+    answer3.textContent = "<javascript>";
+    answer4.textContent = "<script>";
+
+    //adds onclick events to the options
+    answer1.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion4();
+    }
+    answer2.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion4();
+    }
+    answer3.onclick = () => {
+        questionFooterElem.textContent = "Incorrect";
+        timeLeft = timeLeft - 10;
+        showQuestion4();
+    }
+    answer4.onclick = () => {
+        questionFooterElem.textContent = "Correct";
+        currentPoints++;
+        showQuestion4();
+    }
 }
 let showQuestion2 =() => {
     //prints the question and makes options visible
@@ -132,4 +217,5 @@ let startGame = () => {
 mainButtonElem.addEventListener("click", function(){
     //if main button is clicked => run startGame function
     startGame();
+    console.log("made it here");
 });
