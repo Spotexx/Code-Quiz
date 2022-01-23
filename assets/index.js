@@ -64,6 +64,7 @@ let endGame = () => {
         highscores[name] = currentPoints;
         localStorage.setItem("highscores", JSON.stringify(highscores));
     }
+    location.reload();
 }
 
 let showQuestion5 = () => {
