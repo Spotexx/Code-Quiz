@@ -1,11 +1,11 @@
 //Top left: View HighScores button => sends user alert containing high scores
 //Top right: time remaining => loses game if time runs out
 //main area: Code Quiz => User selects answer from multiple choice
-    //if correct => user gets a point
-    //if incorrect => 10 seconds penalty to time remaining
-    //after every question => "correct" or "incorrect" is displayed underneath the question
-    //at the end of the quiz => user can save their initials and score to local storage for highscores
-    //after highscore is saved => user is sent a highscore alert and given the option to play again
+//if correct => user gets a point
+//if incorrect => 10 seconds penalty to time remaining
+//after every question => "correct" or "incorrect" is displayed underneath the question
+//at the end of the quiz => user can save their initials and score to local storage for highscores
+//after highscore is saved => user is sent a highscore alert and given the option to play again
 
 //declaration elements
 let highscoresElem = document.getElementById("highscores");
@@ -25,6 +25,7 @@ let answer4 = document.getElementById("answer4");
 let timeLeft = 60;
 let gameEnd = false;
 let currentPoints = 0;
+let highscores = JSON.parse(localStorage.getItem("highscores")) || {};
 
 
 
@@ -37,7 +38,7 @@ let startTimer = () => {
     timeLeft = 60;
     let timerInterval = setInterval(() => {
         timeLeft--;
-        timerElem.textContent = timeLeft; 
+        timerElem.textContent = timeLeft;
         if (gameEnd === true) {
             clearInterval(timerInterval);
         }
@@ -49,6 +50,22 @@ let startTimer = () => {
         }
     }, 1000);
 }
+let endGame = () => {
+    gameEnd = true;
+    timerElem.textContent = "60";
+    let name = prompt("You finished the quiz with " + currentPoints + " points! Enter your initials to save your score!");
+    //checks if name is taken as a key in object highscores
+    if (highscores[name]) {
+        //if name is taken, user is prompted to enter another name
+        let name = alert("Name already taken! Enter your initials to save your score!");
+        endGame();
+    } else {
+        //if name is not taken, user is given option to save score
+        highscores[name] = currentPoints;
+        localStorage.setItem("highscores", JSON.stringify(highscores));
+    }
+}
+
 let showQuestion5 = () => {
     questionTitleElem.textContent = "which of the following is not a valid for loop?";
     answer1.textContent = "for (let i = 0; i < variable.length; i++)";
@@ -85,7 +102,7 @@ let showQuestion4 = () => {
     answer2.textContent = "alert('Hello World');";
     answer3.textContent = "msg('Hello World');";
     answer4.textContent = "alertBox('Hello World');";
-    
+
     //adds onclick events to the options
     answer1.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
@@ -107,7 +124,7 @@ let showQuestion4 = () => {
         timeLeft = timeLeft - 10;
         showQuestion5();
     }
-} 
+}
 
 let showQuestion3 = () => {
     //prints the question and makes options visible
@@ -139,7 +156,7 @@ let showQuestion3 = () => {
         showQuestion4();
     }
 }
-let showQuestion2 =() => {
+let showQuestion2 = () => {
     //prints the question and makes options visible
     questionTitleElem.textContent = "What of these options shouldn't be done with local storage?";
     answer1.textContent = "Storing a users personal highscores in a game";
@@ -214,7 +231,7 @@ let startGame = () => {
 }
 
 //eventlistener for main button
-mainButtonElem.addEventListener("click", function(){
+mainButtonElem.addEventListener("click", function () {
     //if main button is clicked => run startGame function
     startGame();
     console.log("made it here");
