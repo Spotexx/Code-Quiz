@@ -42,15 +42,14 @@ let startTimer = () => {
         if (gameEnd === true) {
             clearInterval(timerInterval);
         }
-        if (timeLeft <= 0) {
+        if (timeLeft < 0) {
             clearInterval(timerInterval);
-            gameEnd = true;
-            timerElem.textContent = "60";
             alert("Time's up! You didn't finish in time. Your score is " + currentPoints);
             location.reload();
         }
     }, 1000);
 }
+//
 let endGame = () => {
     gameEnd = true;
     timerElem.textContent = "60";
