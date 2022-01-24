@@ -45,6 +45,7 @@ nav {
 #highscores:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 
 #title{
@@ -100,6 +101,9 @@ section{
 #question-content {
     height:70%;
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 #answer1 {
@@ -114,6 +118,7 @@ section{
 #answer1:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 #answer2 {
     visibility: hidden;
@@ -127,6 +132,7 @@ section{
 #answer2:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 #answer3 {
     visibility: hidden;
@@ -140,6 +146,7 @@ section{
 #answer3:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 #answer4 {
     visibility: hidden;
@@ -153,6 +160,7 @@ section{
 #answer4:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 #main-button{
     background-color: var(--button-color);
@@ -165,5 +173,6 @@ section{
 #main-button:hover{
     background-color: var(--text-color);
     color: var(--button-color);
+    cursor: pointer;
 }
 /* #endregion */
