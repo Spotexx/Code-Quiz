@@ -78,11 +78,13 @@ let showQuestion5 = () => {
     answer1.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         endGame();
     }
     answer2.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         endGame();
     }
     answer3.onclick = () => {
@@ -93,6 +95,7 @@ let showQuestion5 = () => {
     answer4.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         endGame();
     }
 }
@@ -108,6 +111,7 @@ let showQuestion4 = () => {
     answer1.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion5();
     }
     answer2.onclick = () => {
@@ -118,11 +122,13 @@ let showQuestion4 = () => {
     answer3.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion5();
     }
     answer4.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion5();
     }
 }
@@ -139,16 +145,19 @@ let showQuestion3 = () => {
     answer1.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion4();
     }
     answer2.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion4();
     }
     answer3.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion4();
     }
     answer4.onclick = () => {
@@ -169,11 +178,13 @@ let showQuestion2 = () => {
     answer1.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion3();
     }
     answer2.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion3();
     }
     answer3.onclick = () => {
@@ -184,6 +195,7 @@ let showQuestion2 = () => {
     answer4.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion3();
     }
 }
@@ -210,16 +222,19 @@ let showQuestion1 = () => {
     answer2.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion2();
     }
     answer3.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion2();
     }
     answer4.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
+        timerElem.textContent = timeLeft;
         showQuestion2();
     }
 
