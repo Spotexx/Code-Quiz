@@ -243,8 +243,17 @@ highscoresElem.addEventListener("click", function () {
     //first sorts the object by the highest value to lowest
     let sortedHighscores = Object.entries(highscores).sort((a, b) => b[1] - a[1]);
     console.log(sortedHighscores);
-    //alerts user with top 5 highscores
-    alert("1. " + sortedHighscores[0][0] + " - " + sortedHighscores[0][1] + "\n"
+    for(let index = 0; index< 5; index++){
+        if(sortedHighscores[index] == null){
+            sortedHighscores[index] = ["No record yet"];
+            sortedHighscores[index].push(0);
+        }
+    }
+
+    // if(sortedHighscores[0])
+    //alerts user with top 5 highscores displaying the word empty if the array element is empty
+
+    alert("1. " + sortedHighscores[0] + " - " + sortedHighscores[0][1] + "\n"
         + "2. " + sortedHighscores[1][0] + " - " + sortedHighscores[1][1] + "\n"
         + "3. " + sortedHighscores[2][0] + " - " + sortedHighscores[2][1] + "\n"    
         + "4. " + sortedHighscores[3][0] + " - " + sortedHighscores[3][1] + "\n"
