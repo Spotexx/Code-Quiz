@@ -46,7 +46,8 @@ let startTimer = () => {
             clearInterval(timerInterval);
             gameEnd = true;
             timerElem.textContent = "60";
-            //end game
+            alert("Time's up! You didn't finish in time. Your score is " + currentPoints);
+            location.reload();
         }
     }, 1000);
 }
