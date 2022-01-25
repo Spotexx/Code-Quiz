@@ -16,10 +16,10 @@ let questionContentElem = document.getElementById("question-content");
 let questionFooterElem = document.getElementById("question-footer");
 let mainButtonElem = document.getElementById("main-button");
 let instructionElem = document.getElementById("instruction");
-let answer1 = document.getElementById("answer1");
-let answer2 = document.getElementById("answer2");
-let answer3 = document.getElementById("answer3");
-let answer4 = document.getElementById("answer4");
+let answer1Elem = document.getElementById("answer1");
+let answer2Elem = document.getElementById("answer2");
+let answer3Elem = document.getElementById("answer3");
+let answer4Elem = document.getElementById("answer4");
 
 //declaration variables
 let timeLeft = 30;
@@ -65,30 +65,30 @@ let endGame = () => {
 let showQuestion5 = () => {
     //question contents
     questionTitleElem.textContent = "which of the following is not a valid for loop?";
-    answer1.textContent = "for (let i = 0; i < variable.length; i++)";
-    answer2.textContent = "for (let i in variable)";
-    answer3.textContent = "for (let i with variable)";
-    answer4.textContent = "for (let i of variable)";
+    answer1Elem.textContent = "for (let i = 0; i < variable.length; i++)";
+    answer2Elem.textContent = "for (let i in variable)";
+    answer3Elem.textContent = "for (let i with variable)";
+    answer4Elem.textContent = "for (let i of variable)";
 
     ///adds onclick events to the options
-    answer1.onclick = () => {
+    answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         endGame();
     }
-    answer2.onclick = () => {
+    answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         endGame();
     }
-    answer3.onclick = () => {
+    answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Correct";
         currentPoints++;
         endGame();
     }
-    answer4.onclick = () => {
+    answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
@@ -100,30 +100,30 @@ let showQuestion5 = () => {
 let showQuestion4 = () => {
     //question contents
     questionTitleElem.textContent = "How do you write \"Hello World\" in an alert box?";//question from w3schools
-    answer1.textContent = "msgBox('Hello World');";
-    answer2.textContent = "alert('Hello World');";
-    answer3.textContent = "msg('Hello World');";
-    answer4.textContent = "alertBox('Hello World');";
+    answer1Elem.textContent = "msgBox('Hello World');";
+    answer2Elem.textContent = "alert('Hello World');";
+    answer3Elem.textContent = "msg('Hello World');";
+    answer4Elem.textContent = "alertBox('Hello World');";
 
     //adds onclick events to the options
-    answer1.onclick = () => {
+    answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion5();
     }
-    answer2.onclick = () => {
+    answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Correct";
         currentPoints++;
         showQuestion5();
     }
-    answer3.onclick = () => {
+    answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion5();
     }
-    answer4.onclick = () => {
+    answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
@@ -134,31 +134,31 @@ let showQuestion4 = () => {
 let showQuestion3 = () => {
     //question contents
     questionTitleElem.textContent = "In HTML, what is the correct TAG for referring to an external style sheet?";//question from w3schools
-    answer1.textContent = "<js>";
-    answer2.textContent = "<link>";
-    answer3.textContent = "<javascript>";
-    answer4.textContent = "<script>";
+    answer1Elem.textContent = "<js>";
+    answer2Elem.textContent = "<link>";
+    answer3Elem.textContent = "<javascript>";
+    answer4Elem.textContent = "<script>";
 
     //adds onclick events to the options
-    answer1.onclick = () => {
+    answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
-    answer2.onclick = () => {
+    answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
-    answer3.onclick = () => {
+    answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
-    answer4.onclick = () => {
+    answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Correct";
         currentPoints++;
         showQuestion4();
@@ -167,30 +167,30 @@ let showQuestion3 = () => {
 let showQuestion2 = () => {
     //question contents
     questionTitleElem.textContent = "What of these options shouldn't be done with local storage?";
-    answer1.textContent = "Storing a users personal highscores in a game";
-    answer2.textContent = "store a theme selection for a color scheme";
-    answer3.textContent = "storing a users username and password";
-    answer4.textContent = "all of the above are fine";
+    answer1Elem.textContent = "Storing a users personal highscores in a game";
+    answer2Elem.textContent = "store a theme selection for a color scheme";
+    answer3Elem.textContent = "storing a users username and password";
+    answer4Elem.textContent = "all of the above are fine";
 
     //adds onclick events to the options
-    answer1.onclick = () => {
+    answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion3();
     }
-    answer2.onclick = () => {
+    answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion3();
     }
-    answer3.onclick = () => {
+    answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Correct";
         currentPoints++;
         showQuestion3();
     }
-    answer4.onclick = () => {
+    answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
@@ -202,34 +202,34 @@ let showQuestion1 = () => {
     //question contents
     questionTitleElem.textContent = "What type of brackets are used at the beginning and end of an array?";
     instructionElem.textContent = "";
-    answer1.style.visibility = "visible";
-    answer1.textContent = "Square brackets";
-    answer2.style.visibility = "visible";
-    answer2.textContent = "Curly brackets";
-    answer3.style.visibility = "visible";
-    answer3.textContent = "Parentheses";
-    answer4.style.visibility = "visible";
-    answer4.textContent = "None of the above";
+    answer1Elem.style.visibility = "visible";
+    answer1Elem.textContent = "Square brackets";
+    answer2Elem.style.visibility = "visible";
+    answer2Elem.textContent = "Curly brackets";
+    answer3Elem.style.visibility = "visible";
+    answer3Elem.textContent = "Parentheses";
+    answer4Elem.style.visibility = "visible";
+    answer4Elem.textContent = "None of the above";
 
     //adds event listeners to the options
-    answer1.onclick = () => {
+    answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Correct";
         currentPoints++;
         showQuestion2();
     }
-    answer2.onclick = () => {
+    answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion2();
     }
-    answer3.onclick = () => {
+    answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
         showQuestion2();
     }
-    answer4.onclick = () => {
+    answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
         timeLeft = timeLeft - 10;
         timerElem.textContent = timeLeft;
