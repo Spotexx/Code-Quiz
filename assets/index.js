@@ -27,12 +27,6 @@ let gameEnd = false;
 let currentPoints = 0;
 let highscores = JSON.parse(localStorage.getItem("highscores")) || {};
 
-
-
-
-
-
-
 //starts the game timer
 let startTimer = () => {
     timeLeft = 30;
@@ -49,10 +43,11 @@ let startTimer = () => {
         }
     }, 1000);
 }
-//
+
+//sets timer to 0, lets you record your score, and reloads the page
 let endGame = () => {
     gameEnd = true;
-    timerElem.textContent = "30";
+    timerElem.textContent = "0";
     let name = prompt("You finished the quiz with " + currentPoints + " points! Enter your initials to save your score!");
     //checks if name is taken as a key in object highscores
     if (highscores[name]) {
@@ -68,6 +63,7 @@ let endGame = () => {
 }
 
 let showQuestion5 = () => {
+    //question contents
     questionTitleElem.textContent = "which of the following is not a valid for loop?";
     answer1.textContent = "for (let i = 0; i < variable.length; i++)";
     answer2.textContent = "for (let i in variable)";
@@ -98,9 +94,11 @@ let showQuestion5 = () => {
         timerElem.textContent = timeLeft;
         endGame();
     }
+    
 }
 
 let showQuestion4 = () => {
+    //question contents
     questionTitleElem.textContent = "How do you write \"Hello World\" in an alert box?";//question from w3schools
     answer1.textContent = "msgBox('Hello World');";
     answer2.textContent = "alert('Hello World');";
@@ -134,7 +132,7 @@ let showQuestion4 = () => {
 }
 
 let showQuestion3 = () => {
-    //prints the question and makes options visible
+    //question contents
     questionTitleElem.textContent = "In HTML, what is the correct TAG for referring to an external style sheet?";//question from w3schools
     answer1.textContent = "<js>";
     answer2.textContent = "<link>";
@@ -167,7 +165,7 @@ let showQuestion3 = () => {
     }
 }
 let showQuestion2 = () => {
-    //prints the question and makes options visible
+    //question contents
     questionTitleElem.textContent = "What of these options shouldn't be done with local storage?";
     answer1.textContent = "Storing a users personal highscores in a game";
     answer2.textContent = "store a theme selection for a color scheme";
@@ -201,7 +199,7 @@ let showQuestion2 = () => {
 }
 
 let showQuestion1 = () => {
-    //prints the question and makes options visible
+    //question contents
     questionTitleElem.textContent = "What type of brackets are used at the beginning and end of an array?";
     instructionElem.textContent = "";
     answer1.style.visibility = "visible";
@@ -240,20 +238,8 @@ let showQuestion1 = () => {
 
 }
 
-
-let startGame = () => {
-    startTimer();
-    showQuestion1();
-}
-
-//eventlistener for main button
-mainButtonElem.addEventListener("click", function () {
-    //if main button is clicked => run startGame function
-    startGame();
-    console.log("made it here");
-});
 //event listener for highscores button
-highscoresElem.addEventListener("click", function () {
+highscoresElem.addEventListener("click", () => {
     //if highscores button is clicked => alert highscores
     //first sorts the object by the highest value to lowest
     let sortedHighscores = Object.entries(highscores).sort((a, b) => b[1] - a[1]);
@@ -273,4 +259,17 @@ highscoresElem.addEventListener("click", function () {
         + "3. " + sortedHighscores[2][0] + " - " + sortedHighscores[2][1] + "\n"    
         + "4. " + sortedHighscores[3][0] + " - " + sortedHighscores[3][1] + "\n"
         + "5. " + sortedHighscores[4][0] + " - " + sortedHighscores[4][1]);
+});
+
+// game INIT function
+let startGame = () => {
+    startTimer();
+    showQuestion1();
+}
+
+//eventlistener for main button
+mainButtonElem.addEventListener("click", function () {
+    //if main button is clicked => run startGame function
+    startGame();
+    console.log("made it here");
 });
