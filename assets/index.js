@@ -22,7 +22,7 @@ let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
 
 //declaration variables
-let timeLeft = 60;
+let timeLeft = 30;
 let gameEnd = false;
 let currentPoints = 0;
 let highscores = JSON.parse(localStorage.getItem("highscores")) || {};
@@ -35,7 +35,7 @@ let highscores = JSON.parse(localStorage.getItem("highscores")) || {};
 
 //starts the game timer
 let startTimer = () => {
-    timeLeft = 60;
+    timeLeft = 30;
     let timerInterval = setInterval(() => {
         timeLeft--;
         timerElem.textContent = timeLeft;
@@ -52,7 +52,7 @@ let startTimer = () => {
 //
 let endGame = () => {
     gameEnd = true;
-    timerElem.textContent = "60";
+    timerElem.textContent = "30";
     let name = prompt("You finished the quiz with " + currentPoints + " points! Enter your initials to save your score!");
     //checks if name is taken as a key in object highscores
     if (highscores[name]) {
