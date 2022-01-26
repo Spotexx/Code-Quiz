@@ -254,7 +254,7 @@ highscoresElem.addEventListener("click", () => {
     // if(sortedHighscores[0])
     //alerts user with top 5 highscores displaying the word empty if the array element is empty
 
-    alert("1. " + sortedHighscores[0] + " - " + sortedHighscores[0][1] + "\n"
+    alert("1. " + sortedHighscores[0][0] + " - " + sortedHighscores[0][1] + "\n"
         + "2. " + sortedHighscores[1][0] + " - " + sortedHighscores[1][1] + "\n"
         + "3. " + sortedHighscores[2][0] + " - " + sortedHighscores[2][1] + "\n"    
         + "4. " + sortedHighscores[3][0] + " - " + sortedHighscores[3][1] + "\n"
