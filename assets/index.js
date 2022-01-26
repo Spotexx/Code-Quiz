@@ -142,7 +142,7 @@ let showQuestion4 = () => {
 
 let showQuestion3 = () => {
     //question contents
-    questionTitleElem.textContent = "In HTML, what is the correct TAG for referring to an external style sheet?";//question from w3schools
+    questionTitleElem.textContent = "In HTML, what is the correct TAG for referring to an external javascript file?";//question from w3schools
     answer1Elem.textContent = "<js>";
     answer2Elem.textContent = "<link>";
     answer3Elem.textContent = "<javascript>";
