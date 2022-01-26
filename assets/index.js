@@ -252,7 +252,6 @@ highscoresElem.addEventListener("click", () => {
     //if highscores button is clicked => alert highscores
     //first sorts the object by the highest value to lowest
     let sortedHighscores = Object.entries(highscores).sort((a, b) => b[1] - a[1]);
-    console.log(sortedHighscores);
     for(let index = 0; index< 5; index++){
         if(sortedHighscores[index] == null){
             sortedHighscores[index] = ["No record yet"];
@@ -280,5 +279,4 @@ let startGame = () => {
 mainButtonElem.addEventListener("click", function () {
     //if main button is clicked => run startGame function
     startGame();
-    console.log("made it here");
 });
