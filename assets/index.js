@@ -44,6 +44,15 @@ let startTimer = () => {
     }, 1000);
 }
 
+//subtracts 10 seconds unless it will make time drop below 0
+let subtractTime = () => {
+    if (timeLeft > 10) {
+        timeLeft -= 10;
+    } else {
+        timeLeft = 0;
+    }
+}
+
 //sets timer to 0, lets you record your score, and reloads the page
 let endGame = () => {
     gameEnd = true;
@@ -73,13 +82,13 @@ let showQuestion5 = () => {
     ///adds onclick events to the options
     answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         endGame();
     }
     answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         endGame();
     }
@@ -90,7 +99,7 @@ let showQuestion5 = () => {
     }
     answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         endGame();
     }
@@ -108,7 +117,7 @@ let showQuestion4 = () => {
     //adds onclick events to the options
     answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion5();
     }
@@ -119,13 +128,13 @@ let showQuestion4 = () => {
     }
     answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion5();
     }
     answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion5();
     }
@@ -142,19 +151,19 @@ let showQuestion3 = () => {
     //adds onclick events to the options
     answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
     answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
     answer3Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion4();
     }
@@ -175,13 +184,13 @@ let showQuestion2 = () => {
     //adds onclick events to the options
     answer1Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion3();
     }
     answer2Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion3();
     }
@@ -192,7 +201,7 @@ let showQuestion2 = () => {
     }
     answer4Elem.onclick = () => {
         questionFooterElem.textContent = "Incorrect";
-        timeLeft = timeLeft - 10;
+        subtractTime();
         timerElem.textContent = timeLeft;
         showQuestion3();
     }
